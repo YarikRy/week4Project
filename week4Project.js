@@ -42,3 +42,33 @@ console.log(allNames)
 
 console.log('Answer 3: To access the last element of any array you can do array[array.length - 1], array.length gives you the total amount of elements in the array and then -1 to get the last index of the array')
 console.log('Answer 4: Technically you can just do array[0] since 0 will always be the first index of any array')
+
+
+let nameLengths = names.map((element) => element.length) //same thing as when I was finding the average of the letters per name
+console.log('Answer 5: ')
+console.log(nameLengths)
+
+let sumOfNames = 0 
+for (let i = 0; i < nameLengths.length; i++){ //Iterates through the loop based on the amount of elements in the nameLengths array and adds each element to the sumOfNames variable
+    sumOfNames += nameLengths[i]
+}
+console.log('Answer 6: ')
+console.log(sumOfNames)
+
+let wordMultiply = (word, n) => {
+    let newWord = ""
+    for (let i = 0; i < n; i++){ //The for loop iterates n amount of times and adds the word parameter to itself n amount of times
+        newWord = newWord + word 
+    }
+    return newWord
+}
+console.log('Answer 7: ')
+console.log(wordMultiply('Hello', 4))
+
+let fullName = (firstName, lastName) => {
+    let newName = `${firstName} ${lastName}` //Used template literals because they're cool to make a new string with the first and last name
+    return newName
+}
+console.log('Answer 8: ')
+console.log(fullName('Yarik', 'Rybkin'))
+
