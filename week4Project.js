@@ -22,3 +22,23 @@ console.log('Answer 1.C: ')
 console.log(averageAge)
 
 
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
+let lengthOfNames = names.map((element) => element.length) //using the map method to make a new array that gives me the number of letters from each name in the names array
+let averageLetters //new variable to store the average number of letters per name
+let totalLetters = 0 //new variable to store the total number of letters
+for (let i = 0; i < lengthOfNames.length; i++){
+    totalLetters += lengthOfNames[i]
+}
+averageLetters = totalLetters / lengthOfNames.length
+console.log('Answer 2.A: ')
+console.log(averageLetters)
+
+let allNames = "" //New variable to store all the names together with spaces
+for (let i = 0; i < names.length; i++){
+    allNames += names[i] + " " //Grabs each element at each index and puts it into allNames with a space in between
+}
+console.log('Answer 2.B: ')
+console.log(allNames)
+
+console.log('Answer 3: To access the last element of any array you can do array[array.length - 1], array.length gives you the total amount of elements in the array and then -1 to get the last index of the array')
+console.log('Answer 4: Technically you can just do array[0] since 0 will always be the first index of any array')
