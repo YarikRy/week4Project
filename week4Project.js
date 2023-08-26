@@ -72,3 +72,75 @@ let fullName = (firstName, lastName) => {
 console.log('Answer 8: ')
 console.log(fullName('Yarik', 'Rybkin'))
 
+let greaterThanHundred = (array) => { //gets the parameter array
+    let total = 0 //variable to store the total sum of all numbers in the array
+    for (let i = 0; i < array.length; i++){ //iterates through the array based on the on the amount of elements in the array
+        total += array[i] // adds each element into the total variable to find the total sum of the array
+    }
+    if (total > 100){ //if the total of the array is greater than 100 it returns true
+        return true
+    }
+    return false //otherwise returns false
+}
+console.log('Answer 9: ')
+console.log(greaterThanHundred(ages)) //used the previously made array ages for example *refer to question 1*
+
+let averageArray = (array) => { //parameter array
+    let total = 0 //variable to store the total sum
+    let averageTotal //variable to store the total average
+    for (let i = 0; i < array.length; i++){ // iterates through the array based on the number of elements in the array
+        total += array[i] // adds each element in the array to the total
+    }
+    averageTotal = total / array.length //calculates the average by taking the total and dividing it by the length of the array
+    return averageTotal
+}
+console.log("Answer 10: ")
+console.log(averageArray(ages)) //used the previously made array ages for example
+
+let q11Array = [1, 2, 3, 4, 5, 6, 7, 8] //made a new array to test the function
+let doubleAverageArray = (array1, array2) => {
+    let total1 = 0 //variable to store the total for the 1st array
+    let total2 = 0 //variable to store the total for the 2nd array
+    let averageTotal1 //variable to store the total average of the 1st array
+    let averageTotal2 //variable to store the total average of the 2nd array
+    for (let i = 0; i < array1.length; i++){ //A for loop to sum up all of the number in the 1st array
+        total1 += array1[i]
+    }
+    for (let i = 0; i < array2.length; i++){ //A for loop to sum up all of the number in the 2nd array
+        total2 += array2[i]
+    }
+    averageTotal1 = total1 / array1.length //finding the average of the first array
+    averageTotal2 = total2 / array2.length //finding the average of the second array
+    if (averageTotal1 > averageTotal2){ //if the average of the first array is greater than the average of the second array it returns true otherwise its false
+        return true
+    }
+    return false
+}
+
+console.log("Answer 11: ")
+console.log(doubleAverageArray(q11Array, ages))
+
+let willBuyDrink = (isHotOutside, moneyInPocket) => { //two parameters isHotOutside and moneyInPocket
+    if(isHotOutside === true && moneyInPocket >= 10.50){ //If both are true it returns true otherwise its false
+        return true
+    }
+    return false
+}
+
+console.log('Answer 12: ')
+console.log('It is hot outside but no money: ' + willBuyDrink(true, 0)) //test 1
+console.log('It is not hot outside but you have money: ' + willBuyDrink(false, 100)) //test 2
+console.log('It is hot outside and you have money: ' + willBuyDrink(true, 100)) //test 3
+
+let playGames = (workDone, homeworkDone, noClasses) => { //Made this function since I was going to play games after finishing this coding project so it fits in with what Im doing
+    if (workDone === true && homeworkDone === true && noClasses === true) { //if all three parameters are true it tells me I can play games but if any one of them is false it tells me I have responsibilities 
+        return "You can play games freely!!! Relax and Enjoy!!!"
+    }
+    return "You cant play games right now, you have responsibilites!!!"
+}
+
+console.log('Answer 13: ')
+console.log('Work not done, homework done, and no classes: ' + playGames(false, true, true)) //test 1
+console.log('Work done, homework not done, and no classes: ' + playGames(true, false, true)) //test 2 
+console.log('Work done, homework done, but you have classes: ' + playGames(true, true, false)) //test 3
+console.log('Work done, homework done, and you have no classes: ' + playGames(true, true, true)) //test 4
